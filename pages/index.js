@@ -37,6 +37,7 @@ export default function Home() {
               pl={{ base: "auto", md: "400" }}
               w={"full"}
               p={0}
+              zIndex={99}
             >
               <Box scrollSnapAlign={"start"}>
                 <About />
