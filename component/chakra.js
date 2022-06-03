@@ -24,7 +24,7 @@ const styles = {
   global: () => ({
     body: {
       bgGradient:
-        "linear-gradient(346deg, rgba(30,30,30,1) 0%, rgba(62,35,62,0.2) 100%)",
+        "linear-gradient(346deg, rgb(20 32 48) 0%, rgb(27 43 44) 100%)",
 
       backgroundAttachment: "fixed",
     },
