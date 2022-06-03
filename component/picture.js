@@ -1,7 +1,6 @@
-import { Box, calc, Center, Spacer } from "@chakra-ui/react";
+import { Box, calc, Center, Image, Spacer } from "@chakra-ui/react";
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const PictureOfMe = () => {
   const MotionBox = motion(Box);
