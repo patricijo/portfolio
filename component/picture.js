@@ -1,4 +1,4 @@
-import { Box, calc, Center, Image, Spacer } from "@chakra-ui/react";
+import { Box, Center, Image } from "@chakra-ui/react";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -18,7 +18,7 @@ const PictureOfMe = () => {
           y: 0,
           height: "auto",
           opacity: 1,
-          transition: { duration: 1 },
+          transition: { duration: 1, delay: 1.3 },
         }}
         maxW={"70vw"}
         w={{ base: "300px" }}
@@ -28,12 +28,17 @@ const PictureOfMe = () => {
       </MotionBox>
 
       <MotionBox
-        initial={{}}
+        initial={{ y: -160, opacity: 0 }}
         animate={{
-          height: "auto",
+          y: 0,
           opacity: 1,
-          transition: { duration: 1 },
+          transition: { duration: 1, delay: 0.5 },
         }}
+        pos={"absolute"}
+        bottom={"0"}
+        left={"0"}
+        w={{ base: "360px" }}
+        maxW={"90vw"}
       >
         <MotionBox
           animate={{
@@ -47,11 +52,6 @@ const PictureOfMe = () => {
             delay: 1,
             repeatType: "reverse",
           }}
-          pos={"absolute"}
-          bottom={"0"}
-          left={"0"}
-          w={{ base: "360px" }}
-          maxW={"90vw"}
         >
           <Image
             objectFit={"contain"}
