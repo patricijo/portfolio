@@ -13,10 +13,10 @@ const PictureOfMe = () => {
       maxH={"calc(100vw*1.1)"}
     >
       <MotionBox
-        initial={{ y: 180, height: 0, opacity: 1 }}
+        initial={{ y: 180, opacity: 1, height: 1 }}
         animate={{
           y: 0,
-          height: "auto",
+          height: "100%",
           opacity: 1,
           transition: { duration: 1, delay: 1.3 },
         }}
@@ -35,7 +35,7 @@ const PictureOfMe = () => {
           transition: { duration: 1, delay: 0.5 },
         }}
         pos={"absolute"}
-        bottom={"0"}
+        bottom={-4}
         left={"0"}
         w={{ base: "360px" }}
         maxW={"90vw"}
