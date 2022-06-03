@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
-import "./skills.module.css";
 
 const References = () => {
   const MotionBox = motion(Center);

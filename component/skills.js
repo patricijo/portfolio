@@ -1,7 +1,6 @@
 import { Box, Button, Center, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
-import "./skills.module.css";
 
 const Skills = () => {
   const MotionBox = motion(Center);
