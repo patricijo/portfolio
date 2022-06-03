@@ -35,8 +35,8 @@ const PictureOfMe = () => {
           transition: { duration: 1, delay: 0.5 },
         }}
         pos={"absolute"}
-        bottom={-4}
-        left={"0"}
+        bottom={0}
+        left={0}
         w={{ base: "360px" }}
         maxW={"90vw"}
       >
