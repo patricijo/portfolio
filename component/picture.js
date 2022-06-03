@@ -1,38 +1,34 @@
-import {
-  Box,
-  Button,
-  Center,
-  Container,
-  Flex,
-  Heading,
-  HStack,
-  Image,
-  Spacer,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, calc, Center, Image, Spacer } from "@chakra-ui/react";
 import React from "react";
 import { motion } from "framer-motion";
 
 const PictureOfMe = () => {
   const MotionBox = motion(Box);
   return (
-    <Box align={"center"} pos={"relative"}>
+    <Center
+      pos={"relative"}
+      w={"380px"}
+      h="400px"
+      maxW={"95vw"}
+      maxH={"calc(100vw*1.1)"}
+    >
       <MotionBox
-        initial={{ height: 0, opacity: 1 }}
+        initial={{ y: 180, height: 0, opacity: 1 }}
         animate={{
+          y: 0,
           height: "auto",
           opacity: 1,
-
           transition: { duration: 1 },
         }}
-        w={{ base: "8vw" }}
+        maxW={"70vw"}
+        w={{ base: "300px" }}
         overflow="hidden"
       >
-        <Image objectFit={"contain"} src="/me.png" alt="me"></Image>
+        <Image objectFit={"contain"} src="/me2.png" alt="me"></Image>
       </MotionBox>
+
       <MotionBox
-        initial={{ height: 0, opacity: 1 }}
+        initial={{}}
         animate={{
           height: "auto",
           opacity: 1,
@@ -52,9 +48,10 @@ const PictureOfMe = () => {
             repeatType: "reverse",
           }}
           pos={"absolute"}
-          bottom={"-10%"}
-          left={"-10%"}
-          w={{ base: "10vw" }}
+          bottom={"0"}
+          left={"0"}
+          w={{ base: "360px" }}
+          maxW={"90vw"}
         >
           <Image
             objectFit={"contain"}
@@ -63,7 +60,7 @@ const PictureOfMe = () => {
           ></Image>
         </MotionBox>
       </MotionBox>
-    </Box>
+    </Center>
   );
 };
 

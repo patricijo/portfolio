@@ -1,26 +1,19 @@
-import {
-  Box,
-  Button,
-  Center,
-  Flex,
-  Spacer,
-  Table,
-  TableCaption,
-  TableContainer,
-  Tbody,
-  Td,
-  Text,
-  Tfoot,
-  Th,
-  Thead,
-  Tr,
-} from "@chakra-ui/react";
+import { Box, Button, Center, Flex } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import React from "react";
 import "./skills.module.css";
 
 const Skills = () => {
+  const MotionBox = motion(Center);
   return (
-    <Center minH={{ base: "auto,", md: "100vh" }}>
+    <MotionBox
+      /*       initial={{ height: "auto" }}
+      animate={{
+        height: "100vh",
+        transition: { duration: 0.5 },
+      }} */
+      minH={{ base: "auto,", md: "100vh" }}
+    >
       <Box
         borderRadius={"lg"}
         w="full"
@@ -52,7 +45,6 @@ const Skills = () => {
                 <span className="le">&quot;HTML&quot;</span>,{" "}
                 <span className="le">&quot;CSS&quot;</span>,{" "}
                 <span className="le">&quot;Solidity&quot;</span>,{" "}
-                <span className="le">&quot;PHP&quot;</span>
                 <span className="la"> ]</span>,{" "}
               </Box>
             </Flex>
@@ -67,7 +59,6 @@ const Skills = () => {
                 <span className="le">&quot;React Native&quot;</span>,{" "}
                 <span className="le">&quot;nextJS&quot;</span>,{" "}
                 <span className="le">&quot;SASS&quot;</span>,{" "}
-                <span className="le">&quot;jQuery&quot;</span>
                 <span className="la"> ]</span>,{" "}
               </Box>
             </Flex>
@@ -78,9 +69,9 @@ const Skills = () => {
             <Flex>
               <Box>
                 <span className="la">[ </span>
-                <span className="le">&quot;Chakra UI&quot;</span>,{" "}
                 <span className="le">&quot;Redux(toolkit)&quot;</span>,{" "}
                 <span className="le">&quot;React Router&quot;</span>,{" "}
+                <span className="le">&quot;Chakra UI&quot;</span>,{" "}
                 <span className="le">&quot;Framer-Motion&quot;</span>
                 <span className="la"> ]</span>,
               </Box>
@@ -94,6 +85,7 @@ const Skills = () => {
                 <span className="la">[ </span>
                 <span className="le">&quot;Moralis&quot;</span>,{" "}
                 <span className="le">&quot;Firebase&quot;</span>,{" "}
+                <span className="le">&quot;Express.js&quot;</span>,{" "}
                 <span className="le">&quot;MongoDB&quot;</span>
                 <span className="la"> ]</span>,
               </Box>
@@ -102,12 +94,14 @@ const Skills = () => {
           <div className="cm-line">
             <span className="lk">{"} "}</span>;
           </div>
-          <Button pos={"absolute"} right={2} bottom={2}>
-            npm run skills.js
-          </Button>
+          <a href="#refs">
+            <Button pos={"absolute"} right={2} bottom={2}>
+              npm run skills.js
+            </Button>
+          </a>
         </Box>
       </Box>
-    </Center>
+    </MotionBox>
   );
 };
 

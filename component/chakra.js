@@ -25,7 +25,7 @@ const styles = {
     body: {
       bgGradient:
         "linear-gradient(346deg, rgba(30,30,30,1) 0%, rgba(62,35,62,0.2) 100%)",
-      minH: "calc(100vh)",
+
       backgroundAttachment: "fixed",
     },
     ".cm-line": {

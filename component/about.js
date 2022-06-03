@@ -22,7 +22,7 @@ const About = () => {
       direction={"column"}
       minH={{ base: "auto", md: "100vh" }}
     >
-      <Box>
+      <Box pb={4}>
         <MotionBox
           initial={{ opacity: 0, x: 100 }}
           animate={{
@@ -32,9 +32,7 @@ const About = () => {
           }}
           overflow="hidden"
         >
-          <Heading size="xl" mb="4">
-            Hi, my name is{" "}
-          </Heading>
+          <Heading size="xl">Hi, my name is </Heading>
         </MotionBox>
         <MotionBox
           initial={{ opacity: 0, x: 200 }}
@@ -64,22 +62,33 @@ const About = () => {
           overflow="hidden"
         >
           <Text fontSize={"2xl"} mb="4">
-            I am a self-taught Front-End Developer <br />
-            based in Hamburg/Germany
+            I am a self-taught Front-End Developer based in Hamburg/Germany
           </Text>
         </MotionBox>
         <MotionBox
-          initial={{ opacity: 0, scale: 0 }}
+          initial={{ opacity: 0, x: 100 }}
           animate={{
-            scale: 1,
+            x: 0,
             opacity: 1,
-            transition: { duration: 0.7 },
+            transition: { duration: 0.9 },
           }}
-          overflow="hidden"
         >
-          <Button borderRadius="8px" py="4" px="4">
-            Hire Me!
-          </Button>
+          <Stack direction={"row"} spacing={4}>
+            <a
+              href="mailto:sebastian.patrici@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button>Hire Me!</Button>
+            </a>
+            <a
+              href="https://github.com/patricijo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button>View Github!</Button>
+            </a>
+          </Stack>
         </MotionBox>
       </Box>
     </Flex>
